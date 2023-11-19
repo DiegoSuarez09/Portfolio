@@ -1,31 +1,298 @@
-body{
-	background-color:#F8F8F8!important;
+/*Estilos Generales*/
+section{/*esto lo podriamos hacer con boostrap pero como vamos a tener varias seccions declaramos algo mas general*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 5rem;
+    font-family: 'Kanit', sans-serif;/* rem es un tamaño relativo al tamaño de la letra raiz=html*/
+}
+/*Barra de navegavion */
+.logo{
+ height: 40px;
+ border-radius: 20%;
+}
+.navbar{
+    background-color: rgb(216, 41, 11)
 }
 
-#profile-wrapper{
-	text-align: center;
+.navbar-collapse{
+    justify-content: flex-end;
 }
 
-#profile-pic{
-	width:150px;
-	height: 150px;
-	border-radius: 50%;
-	margin-left: auto;
-  	margin-right: auto;
+/*Seccion Home*/
+
+.ImgPerfil{
+    width: 240px;
+    height: 240px;
+    box-shadow: -3px 4px 10px 2px black ;
+    
+    margin: 20px;
+}
+.hero{
+    background-color: rgb(244, 244, 244);
+    min-height: 450px;
+    text-align: center;
 }
 
-ul{
-	padding: 0;
-    list-style-type: none;
+.hero-principal{
+    padding: 3rem;
 }
 
-
-.social-links ul, li{
-	list-style-type:none;
-	display: inline-block;
+.hero-principal h2{
+    font-size: 1.5rem;
+    color: #615151;
+}
+/*Seccion Sobre Mi*/
+.seccion-oscura{
+    
+    color: white;
+    background-color: black;
+}
+.sobre-mi{
+    height: 500px;
+    padding: 10px;
+}
+.sobre-mi .contenedor{
+    max-width: 600px;
+    text-align: center;
 }
 
-.social{
-	width:20px;
-	height: 20px;
+.seccion-titulo{
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Kanit', sans-serif;
 }
+.seccion-texto{
+    font-size: 1.2rem;
+}
+
+/*Seccion Experiencia*/
+.experiencia{
+    padding: 40px 40px 60px 40px;
+}
+.seccion-clara{
+    color: black;
+    background-color: antiquewhite;
+}
+.experiencia .columna{
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease;
+}
+.experiencia .columna:hover{
+    color: white;
+    background-color: #1b1b32;
+}
+
+.experiencia-titulo{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.experiencia i{
+    font-size: 2.5rem;
+    color: #7ade30;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+.badges-contenedor{
+
+    font-size: 25px;
+    font-weight:bold;
+    margin: 10px 0;
+    
+}
+.badge{
+    margin: 5px;
+}
+
+/*Seccion Proyectos*/
+.proyectos-recientes{
+    padding: 40px;
+}
+.texto-negro{
+    color: black;
+}
+.seccion-descripcion{
+    font-size: 1.2rem;
+    color: #615151;
+}
+.proyectos-recientes img{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.proyectos-contenedor{
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+.overlay{
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.overlay p{
+    
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+
+}
+.proyecto{
+    position: relative;
+}
+.proyecto:hover .overlay{
+    opacity: 1;
+    
+}
+.proyecto:hover img{
+    opacity: 0.2;
+}
+
+.overlay i{
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+
+}
+
+/* Contacto */
+
+.contacto .container {
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+  }
+  
+  .contacto .rectangulo {
+    margin-top: -5rem;
+    background-color: rgb(13, 110, 253);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white;
+  }
+  
+  .contacto .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contacto .descripcion {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .contacto button {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .contacto button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .contacto button i {
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .contacto button:hover i {
+    color: black;
+  }
+  
+  /* Pie de pagina (footer) */
+  
+  footer {
+    min-height: 500px;
+  }
+  
+  .footer-logo {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    color: red;
+  }
+  
+  .footer-texto {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+  }
+  
+  .iconos-redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+  }
+  
+  .iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+  }
+  
+  .iconos-redes-sociales a:hover i {
+    color: black;
+  }
+  
+  .derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+  }
+  
+/*adaptable Responsivo*/
+@media screen and (min-width: 768px){
+    .hero-inferior-imagen {
+    max-width: 600px;/* se usa para que la imagen no se estire*/
+    }
+}
+
+@media screen and (max-width: 400px){
+    .overlay p{
+        font-size: 18px;
+    }
+    .overlay i{
+        font-size: 40px;
+    }
+    
+}
+
